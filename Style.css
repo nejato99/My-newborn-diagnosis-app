@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #e0e5ec;
+    --text-color: #333;
+    --shadow-color: #a3b1c6;
+    --highlight-color: #ffffff;
+    --accent-color: #4a90e2;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.neumorphic {
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--shadow-color), 
+                -5px -5px 10px var(--highlight-color);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    box-shadow: inset 2px 2px 5px var(--shadow-color), 
+                inset -2px -2px 5px var(--highlight-color);
+    font-size: 16px;
+}
+
+button {
+    background: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 5px var(--shadow-color), 
+                inset -2px -2px 5px var(--highlight-color);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#diagnosisResult {
+    margin-top: 30px;
+}
+
+#diagnosisText {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#treatmentOptions {
+    padding-left: 20px;
+}
