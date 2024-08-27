@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newborn Diagnosis App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>Newborn Diagnosis</h1>
+        
+        <form id="babyInfoForm" class="neumorphic">
+            <input type="text" id="babyName" placeholder="Baby's Name" required>
+            <input type="number" id="babyAge" placeholder="Age (in hours)" required>
+            <select id="babySex" required>
+                <option value="">Select Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="number" id="babyWeight" placeholder="Weight (in kg)" step="0.1" required>
+            <input type="date" id="babyDOB" required>
+            
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="notBreathing"> Not Breathing
+                </label>
+                <label>
+                    <input type="checkbox" id="gasping"> Gasping
+                </label>
+                <label>
+                    <input type="checkbox" id="poorBreathing"> Poor Breathing (below 30bpm)
+                </label>
+            </div>
+            
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="yellowSkin"> Yellow Skin
+                </label>
+                <label>
+                    <input type="checkbox" id="yellowEyes"> Yellow Eyes
+                </label>
+                <label>
+                    <input type="checkbox" id="yellowFace"> Yellow Face
+                </label>
+            </div>
+            
+            <button type="submit" class="neumorphic">Diagnose</button>
+        </form>
+        
+        <div id="diagnosisResult" class="neumorphic hidden">
+            <h2>Diagnosis Result</h2>
+            <p id="diagnosisText"></p>
+            <h3>Treatment Options:</h3>
+            <ul id="treatmentOptions"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
